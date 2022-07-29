@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas 
+matplotlib
+yfinance 
+pystan 
+prophet 
+joblib
+argparse
