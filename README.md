@@ -2,6 +2,11 @@
 Deployment for Stock Predictor API
 
 
-'''bash
+```bash
 conda create -n stock-predictor python=3.8
-'''
+```
+
+```bash
+pip list --format=freeze > requirements_.txt
+```
+
