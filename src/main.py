@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Query, HTTPException
 from pydantic import BaseModel
-from model import predict, convert
+from src.model import predict, convert
 
 app = FastAPI()
 
@@ -14,6 +14,13 @@ class StockOut(StockIn):
 
 @app.post("/predict", response_model=StockOut, status_code=200)
 def get_prediction(payload: StockIn):
+    """ Endpoint to predict stock price
+    Args:
+        payload (StockIn): Payload containing ticker and days
+    Returns:
+        StockOut: Payload containing forecast
+    """
+    
     ticker = payload.ticker
     days = payload.days
 
