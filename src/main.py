@@ -20,7 +20,7 @@ def get_prediction(payload: StockIn):
     Returns:
         StockOut: Payload containing forecast
     """
-    
+
     ticker = payload.ticker
     days = payload.days
 
@@ -32,5 +32,7 @@ def get_prediction(payload: StockIn):
     response_object = {
         "ticker": ticker, 
         "days": days,
-        "forecast": convert(prediction_list)}
+        "forecast": convert(prediction_list)
+    }
+    
     return response_object
