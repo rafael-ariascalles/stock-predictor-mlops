@@ -25,14 +25,14 @@ def train(ticker="MSFT"):
     model = Prophet()
     model.fit(df_forecast)
 
-    joblib.dump(model, Path(BASE_DIR).joinpath(f"{ticker}.joblib"))
+    joblib.dump(model, Path(BASE_DIR).joinpath(f"ml/{ticker}.joblib"))
 
 
 def predict(ticker="MSFT", days=7):
-    model_file = Path(BASE_DIR).joinpath(f"{ticker}.joblib")
+    model_file = Path(BASE_DIR).joinpath(f"ml/{ticker}.joblib")
     if not model_file.exists():
         return False
-
+    # Load the model from the file in every call
     model = joblib.load(model_file)
 
     future = TODAY + datetime.timedelta(days=days)
