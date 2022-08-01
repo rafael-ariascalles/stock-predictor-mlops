@@ -17,8 +17,13 @@ pip list --format=freeze > requirements_.txt
 ```
 
 ```bash
-curl --header "Content-Type: application/json" --request POST --data '{"ticker":"MSFT", "days":7}' http://0.0.0.0:8000/predict
+curl --header "Content-Type: application/json" --request POST --data '{"ticker":"MSFT", "days":7}' http://ec2-54-157-231-225.compute-1.amazonaws.com:8000/predict
 ```
+![cmd](./img/sp_terminal.png)
+![docs](./img/sp_docs.png)
+
+
+
 
 ## ML Discussion and Hints
 
