@@ -22,7 +22,9 @@ curl --header "Content-Type: application/json" --request POST --data '{"ticker":
 ![cmd](./img/sp_terminal.png)
 ![docs](./img/sp_docs.png)
 
+# NExt Steps
 
+1. Dockerize the application: this will allow to run without worring installing dependencies directly into the server. and I will be able to run the application easier and if necessary migrate to a Kubernet cluster. Also this will allow to run build a CI/CD pipeline for a Docker image instead of the code. 
 
 
 ## ML Discussion and Hints
