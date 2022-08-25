@@ -1,5 +1,5 @@
 import datetime
-from pathlib import Path
+#from pathlib import Path
 
 import joblib
 import pandas as pd
@@ -8,7 +8,7 @@ from prophet import Prophet
 
 import argparse
 
-BASE_DIR = Path(__file__).resolve(strict=True).parent
+#BASE_DIR = Path(__file__).resolve(strict=True).parent
 TODAY = datetime.date.today()
 
 
@@ -25,13 +25,14 @@ def train(ticker="MSFT"):
     model = Prophet()
     model.fit(df_forecast)
 
-    joblib.dump(model, Path(BASE_DIR).joinpath(f"ml/{ticker}.joblib"))
+    #joblib.dump(model, Path(BASE_DIR).joinpath(f"ml/{ticker}.joblib"))
+    joblib.dump(model,f"ml/{ticker}.joblib")
 
 
 def predict(ticker="MSFT", days=7):
-    model_file = Path(BASE_DIR).joinpath(f"ml/{ticker}.joblib")
-    if not model_file.exists():
-        return False
+    model_file = f"ml/{ticker}.joblib"
+    #if not model_file.exists():
+    #    return False
     # Load the model from the file in every call
     model = joblib.load(model_file)
 
