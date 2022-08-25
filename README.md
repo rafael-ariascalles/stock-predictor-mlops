@@ -40,3 +40,20 @@ curl --header "Content-Type: application/json" --request POST --data '{"ticker":
 
 5. How is seasonality different from cyclicality? Fill in the blanks:
 Seasonality is predictable, whereas cyclicality is not. (Sesonality is a repetting patter, whereas cyclicality is more variable)
+
+## Docker discussion
+
+**a) What does it mean to create a Docker image and why do we use Docker images?** Docker images are a way to package and deploy software and to create a Docker Image is like create all the blueprint with the disk component that the software virtualize will use. This mean that the Image contains all the files for a piece of software to run.
+
+
+**b) Please explain what is the difference from a Container vs a Virtual Machine?** A container manage just the necesary component in order to run the software that is been deployed. A Virtual Machine manage all the components that a Machine need to run, for example video component or security component. A container manage just the necesary to run a software. For example if we run a python script then it will use just the necesary to run the python script but a virtual machine will have all the components to virtualize a OS and run the software.
+
+**c) What are 5 examples of container orchestration tools (please list tools)?**
+- Docker Compose
+- Kubernetes
+- Docker Swarm
+- Rancher
+- Mesos
+
+
+**d) How does a Docker image differ from a Docker container?** Docker container is the software that is been deployed and running (using RAM and DISK). Docker image is the blueprint that contain all the necesary components to run the software (USING DISK). we can have multiple containers running the same Image.
